@@ -4,7 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Dreams - Tienda de Dulces y Regalos</title>
+
+    <!-- Verificación de Google Search Console -->
+    <meta name="google-site-verification" content="tDhu0m7eWtZrA8QuQQhSEGSjPX5vphJ9MrjHHbiVuCU" />
+
+    <!-- Título optimizado para SEO Local -->
+    <title>Sweet Dreams | Desayunos Sorpresa y Dulces en Popayán</title>
+
+    <!-- Descripción persuasiva que aparecerá en los resultados de Google -->
+    <meta name="description" content="Encuentra los mejores regalos, cajas de chocolates artesanales y desayunos sorpresa a domicilio en Popayán. Endulza tus momentos especiales con Sweet Dreams.">
+
+    <meta property="og:title" content="Sweet Dreams | Regalos en Popayán">
+    <meta property="og:description" content="Cajas de dulces y desayunos sorpresa hechos con amor. Compra online.">
+    <meta property="og:image" content="https://dulces-detalles-ecommerse-deploy.onrender.com/recursos/img/logo_3.png">
+    <meta property="og:url" content="https://dulces-detalles-ecommerse-deploy.onrender.com/">
 
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/globales.css" />
