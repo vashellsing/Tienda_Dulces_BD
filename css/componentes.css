@@ -1,0 +1,387 @@
+/* ==================== NAVEGACIÓN ==================== */
+.encabezado {
+    display: flex;
+    justify-content: center; 
+    gap: 80px; 
+    align-items: center;
+    padding: 10px 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px; /* Un tamaño más elegante */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Pequeño efecto al tocar el logo */
+}
+
+.menu {
+    display: flex;
+    gap: 30px; /* Más espacio entre los botones */
+    align-items: center;
+}
+
+.menu a {
+    font-weight: 600;
+    color: var(--color-texto);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Efecto de subrayado animado moderno */
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after, .menu a.activo::after {
+    width: 100%;
+}
+
+.menu a:hover, .menu a.activo {
+    color: var(--color-primario);
+}
+
+
+/* ==================== BOTONES ==================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--borde-redondeado);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    border: none;
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+.btn-primario:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
+}
+.btn-header-cta {
+    background-color: #ffffff;
+    color: var(--color-secundario);
+    border: 1px solid #e7b7cb;
+    border-radius: 999px;
+    padding: 10px 18px;
+}
+
+.btn-header-cta:hover {
+    background-color: #fff7fb;
+    transform: translateY(-2px);
+}
+
+/* ==================== BANNER PRINCIPAL ==================== */
+.banner-principal {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../recursos/img/peluche.png') center/cover;
+    height: 70vh; /* Un poco más alto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenido-banner {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 60px;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-tarjeta);
+    max-width: 600px;
+    animation: fadeIn 1s ease; /* Usamos tu animación existente */
+}
+
+.contenido-banner h1 {
+    font-size: 36px; /* Más grande y llamativo */
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.contenido-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ==================== CUADRÍCULA Y TARJETAS DE PRODUCTOS ==================== */
+.cuadricula-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta-producto {
+    background-color: #ffffff;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-tarjeta);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* IMPORTANTE: Mantiene las esquinas limpias */
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12); /* Sombra más fuerte al pasar el mouse */
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Evita que las imágenes se deformen */
+    border-radius: var(--borde-redondeado);
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-producto .precio {
+    color: var(--color-acento);
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* ==================== VISTA DETALLE DE PRODUCTO ==================== */
+.detalle-producto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 50px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-tarjeta);
+    align-items: start;
+}
+
+.detalle-col-izq img {
+    width: 100%;
+    border-radius: var(--borde-redondeado);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.detalle-col-izq img:hover {
+    transform: scale(1.02);
+}
+
+.producto-titulo {
+    font-size: 32px;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+}
+
+.producto-precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-acento);
+    margin-bottom: 20px;
+}
+
+.separador {
+    height: 2px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+}
+
+.descripcion-label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.producto-descripcion {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-grande {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.beneficios-extra {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fdf4f8; /* El rosa suave de fondo */
+    border-radius: 8px;
+}
+
+.beneficios-extra p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #777;
+
+}
+
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: #888;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.btn-volver:hover {
+    color: var(--color-secundario);
+}
+
+.acciones-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.btn-header-cta {
+    background-color: #ffffff;
+    color: var(--color-secundario);
+    border: 1px solid #e7b7cb;
+    border-radius: 999px;
+    padding: 10px 18px;
+}
+
+.btn-header-cta:hover {
+    background-color: #fff7fb;
+    transform: translateY(-2px);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .detalle-producto-container {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 20px;
+    }
+}
+
+/* ==================== EXTRAS ==================== */
+.insignia {
+    background-color: var(--color-acento);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+
+/* =========================================================================
+   MODAL PERSONALIZADO
+   ========================================================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Para que quede por encima de todo */
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-caja {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: slideUp 0.3s ease;
+}
+
+.modal-caja p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Animaciones para darle ese toque "Premium" */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* ==================== HEADER RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navegacion {
+        width: 100%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}
+
+/* ==================== IMÁGENES ==================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
