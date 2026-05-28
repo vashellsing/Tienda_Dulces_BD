@@ -1,21 +1,23 @@
 <?php
-// Credenciales por defecto de Laragon
-$host = 'localhost';
-$dbname = 'tienda_dulces';
-$username = 'root';
-$password = '';
+// includes/conexion.php
+
+$host = 'bzunb4gksjklhdafupl2-mysql.services.clever-cloud.com';
+$db   = 'bzunb4gksjklhdafupl2'; // Nombre asignado por Clever Cloud
+$user = 'u4hif5lrq5fuadiq';
+$pass = 'TU_CONTRASEÑA_SECRETA_AQUÍ'; // Pega aquí la contraseña de Clever Cloud
+$port = '3306';
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;port=$port;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
 try {
-    // Creamos la conexión PDO
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-
-    // Configuramos PDO para que nos avise si hay algún error
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Descomenta la siguiente línea solo para probar si funciona:
-    // echo "¡Conexión exitosa a la base de datos!";
-
-} catch (PDOException $e) {
-    // Si algo falla, detenemos todo y mostramos el error
-    die("Error de conexión: " . $e->getMessage());
+    $conn = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    // En producción es mejor no mostrar detalles internos del servidor
+    die("Error de conexión a la base de datos.");
 }
