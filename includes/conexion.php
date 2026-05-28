@@ -4,7 +4,7 @@
 $host = 'bzunb4gksjklhdafupl2-mysql.services.clever-cloud.com';
 $db   = 'bzunb4gksjklhdafupl2'; // Nombre asignado por Clever Cloud
 $user = 'u4hif5lrq5fuadiq';
-$pass = 'TU_CONTRASEÑA_SECRETA_AQUÍ'; // Pega aquí la contraseña de Clever Cloud
+$pass = 'UaQjoxRwmHJxfGPu3Q8s'; // Pega aquí la contraseña de Clever Cloud
 $port = '3306';
 $charset = 'utf8mb4';
 
@@ -16,8 +16,8 @@ $options = [
 ];
 
 try {
-    $conn = new PDO($dsn, $user, $pass, $options);
+     $conn = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    // En producción es mejor no mostrar detalles internos del servidor
-    die("Error de conexión a la base de datos.");
+     // Mostramos el error exacto para saber qué corregir
+     die("Error de conexión a la base de datos: " . $e->getMessage());
 }
