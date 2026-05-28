@@ -2,9 +2,9 @@
 // includes/conexion.php
 
 $host = 'bzunb4gksjklhdafupl2-mysql.services.clever-cloud.com';
-$db   = 'bzunb4gksjklhdafupl2'; // Nombre asignado por Clever Cloud
+$db   = 'bzunb4gksjklhdafupl2'; 
 $user = 'u4hif5lrq5fuadiq';
-$pass = 'UaQjoxRwmHJxfGPu3Q8s'; // Pega aquí la contraseña de Clever Cloud
+$pass = 'UaQjoxRwmHJxfGPu3Q8s'; 
 $port = '3306';
 $charset = 'utf8mb4';
 
