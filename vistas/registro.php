@@ -1,6 +1,4 @@
 <?php
-// Iniciamos la sesión por si la necesitamos después
-session_start();
 // Importamos la conexión
 require_once 'includes/conexion.php';
 
