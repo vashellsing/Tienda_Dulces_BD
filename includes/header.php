@@ -10,6 +10,8 @@
 
     <!-- Título optimizado para SEO Local -->
     <title>Sweet Dreams | Desayunos Sorpresa y Dulces en Popayán</title>
+    <!-- Favicon para la pestaña del navegador y resultados de Google -->
+    <link rel="icon" type="image/png" href="recursos/img/logo_3.png" />
 
     <!-- Descripción persuasiva que aparecerá en los resultados de Google -->
     <meta name="description" content="Encuentra los mejores regalos, cajas de chocolates artesanales y desayunos sorpresa a domicilio en Popayán. Endulza tus momentos especiales con Sweet Dreams.">
