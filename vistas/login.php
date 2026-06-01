@@ -1,6 +1,5 @@
 <?php
-// Iniciamos la sesión para poder guardar quién se logueó
-// session_start();
+
 // Importamos la conexión a la base de datos
 require_once 'includes/conexion.php';
 
