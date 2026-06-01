@@ -1,7 +1,38 @@
 <?php
-// Asegurarnos de que la sesión esté iniciada para poder leer el nombre
+// 1. Iniciamos la sesión si no está iniciada
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+}
+
+// 2. Lógica de seguridad: Cierre de sesión por inactividad
+if (isset($_SESSION['usuario_id'])) {
+
+    $tiempo_maximo = 15 * 60; // 15 minutos expresados en segundos (900)
+
+    // Si existe un registro del último clic del usuario, calculamos el tiempo que ha pasado
+    if (isset($_SESSION['ultimo_acceso'])) {
+        $tiempo_inactivo = time() - $_SESSION['ultimo_acceso'];
+
+        // Si el tiempo inactivo superó el límite
+        if ($tiempo_inactivo > $tiempo_maximo) {
+
+            // Destruimos la sesión en el servidor (PHP)
+            session_unset();
+            session_destroy();
+
+            // Destruimos los datos en el navegador (JavaScript) y redirigimos
+            echo "<script>
+                localStorage.removeItem('usuarioLogueado');
+                localStorage.removeItem('nombreUsuario');
+                alert('Por seguridad, tu sesión ha expirado tras 15 minutos de inactividad.');
+                window.location.href = 'index.php?vista=login';
+            </script>";
+            exit(); // Detenemos la carga del resto de la página
+        }
+    }
+
+    // Si no ha superado el tiempo, actualizamos su último acceso a la hora actual
+    $_SESSION['ultimo_acceso'] = time();
 }
 ?>
 <!doctype html>
