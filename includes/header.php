@@ -1,5 +1,5 @@
 <?php
-// Asegurarnos de que la sesión esté iniciada para poder leer el nombre
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
