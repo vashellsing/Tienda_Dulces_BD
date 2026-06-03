@@ -20,15 +20,7 @@
     transform: none; /* Quitamos el salto para que se sienta como una pestaña */
 }
 
-.descripcion-catalogo {
-    font-family: var(--fuente-principal);
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 35px auto;
-    color: var(--color-texto);
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
+
 
 /* Estilo para el botón de la categoría que esté seleccionada en ese momento */
 .btn-filtro.activo {
@@ -46,7 +38,20 @@
 }
 
 
+.descripcion-catalogo {
+    font-family: var(--fuente-principal);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    color: var(--color-texto);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
 
+.descripcion-catalogo strong {
+    color: var(--color-secundario);
+    font-weight: 600;
+}
 
 /* ==================== ESTILOS ESPECÍFICOS: LOGIN ==================== */
 
