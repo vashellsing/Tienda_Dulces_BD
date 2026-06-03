@@ -15,9 +15,12 @@ try {
 <main>
     <section class="hero-portada contenedor" id="inicio">
         <div class="hero-contenido">
-            <span class="hero-badge">Regalos bonitos</span>
-            <h1 class="hero-titulo">Endulza tus <span>mejores</span> momentos</h1>
-            <p class="hero-texto">Descubre nuestra exclusiva colección de dulces, desayunos sorpresa, flores y peluches preparados con mucho amor para regalar momentos inolvidables.</p>
+            <!-- Etiqueta semántica H1 optimizada para SEO Local -->
+            <span class="hero-badge">Regalos a domicilio en Popayán</span>
+            <h1 class="hero-titulo">Desayunos Sorpresa: <br>Endulza tus <span>mejores</span> momentos</h1>
+
+            <p class="hero-texto">Descubre nuestra exclusiva colección de dulces, desayunos sorpresa, flores y peluches preparados con mucho amor para regalar momentos inolvidables en Popayán y sus alrededores.</p>
+
             <div class="hero-botones">
                 <a href="index.php?vista=catalogo" class="btn btn-primario">Ver catálogo</a>
                 <a href="#nosotros" class="btn btn-secundario">Conócenos</a>
@@ -25,16 +28,21 @@ try {
         </div>
         <div class="hero-visual">
             <span class="hero-etiqueta">Favorito del mes</span>
-            <img src="recursos/img/caja_dulces.png" alt="Caja de dulces" />
+            <!-- Atributo alt descriptivo para Google Imágenes -->
+            <img src="recursos/img/caja_dulces.png" alt="Caja de dulces y chocolates artesanales para regalo sorpresa en Popayán" />
         </div>
     </section>
 
     <section class="contenedor seccion-destacados" id="productos">
-        <h2 class="titulo-seccion">Nuestros favoritos</h2>
+        <!-- H2 con palabras clave de negocio -->
+        <h2 class="titulo-seccion">Nuestros Regalos y Dulces Favoritos</h2>
+
         <div id="contenedor-destacados" class="cuadricula-productos">
             <?php foreach ($destacados as $producto): ?>
                 <div class="tarjeta-producto">
-                    <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?>">
+                    <!-- Agregamos "en Popayán" dinámicamente al alt de cada producto -->
+                    <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?> a domicilio en Popayán">
+
                     <h3><?php echo htmlspecialchars($producto['nombre']); ?></h3>
                     <p class="precio">$ <?php echo number_format($producto['precio'], 0, ',', '.'); ?></p>
 
@@ -50,8 +58,9 @@ try {
             <?php endforeach; ?>
         </div>
     </section>
+
     <section class="contenedor" id="nosotros">
-        <h2 class="titulo-seccion">¿Por qué elegirnos?</h2>
+        <h2 class="titulo-seccion">¿Por qué elegir nuestros regalos?</h2>
 
         <div class="seccion-info-grid">
             <article class="tarjeta-info">
@@ -83,10 +92,10 @@ try {
     <section class="contenedor seccion-contacto" id="contacto">
         <div>
             <h2 class="titulo-seccion" style="text-align: left; margin-bottom: 15px">
-                Contacto
+                Contacto y Domicilios
             </h2>
             <p class="texto-contacto">
-                ¿Necesitas un regalo especial? Escríbenos y te ayudamos a armar el
+                ¿Necesitas un regalo especial en Popayán? Escríbenos y te ayudamos a armar el
                 detalle perfecto.
             </p>
         </div>
@@ -99,7 +108,6 @@ try {
             <a href="index.php?vista=catalogo" class="btn btn-primario btn-bloque">Comprar ahora</a>
         </div>
     </section>
-
 </main>
 
 
