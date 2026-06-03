@@ -16,7 +16,10 @@ try {
 ?>
 
 <main class="contenedor">
-  <h1 class="titulo-seccion">Nuestro Catálogo</h1>
+  <h1 class="titulo-seccion">Catálogo de Regalos, Dulces y Desayunos en Popayán</h1>
+  <p class="descripcion-catalogo">
+    Explora nuestra variedad de <strong>cajas de chocolates, arreglos florales, peluches y desayunos sorpresa</strong>. Encuentra el detalle perfecto y sorprende a esa persona especial con entregas a domicilio garantizadas.
+  </p>
 
   <section class="barra-filtros">
     <button class="btn btn-filtro activo" data-categoria="Todos">Todos</button>
@@ -32,7 +35,8 @@ try {
 
       <div class="tarjeta-producto" data-categoria="<?php echo htmlspecialchars($producto['categoria']); ?>">
 
-        <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?>">
+        <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>"
+          alt="<?php echo htmlspecialchars($producto['nombre']); ?> - <?php echo htmlspecialchars($producto['categoria']); ?> a domicilio en Popayán">
 
         <h3><?php echo htmlspecialchars($producto['nombre']); ?></h3>
 

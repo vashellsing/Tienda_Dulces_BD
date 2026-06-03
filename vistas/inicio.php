@@ -15,9 +15,9 @@ try {
 <main>
     <section class="hero-portada contenedor" id="inicio">
         <div class="hero-contenido">
-            <span class="hero-badge">Regalos bonitos</span>
+            <span class="hero-badge">Regalos a domicilio en Popayán</span>
             <h1 class="hero-titulo">Endulza tus <span>mejores</span> momentos</h1>
-            <p class="hero-texto">Descubre nuestra exclusiva colección de dulces, desayunos sorpresa, flores y peluches preparados con mucho amor para regalar momentos inolvidables.</p>
+            <p class="hero-texto">Descubre nuestra exclusiva colección de <strong>cajas de chocolates, desayunos sorpresa, flores y peluches</strong>. Preparamos cada detalle con mucho amor para endulzar tus momentos inolvidables.</p>
             <div class="hero-botones">
                 <a href="index.php?vista=catalogo" class="btn btn-primario">Ver catálogo</a>
                 <a href="#nosotros" class="btn btn-secundario">Conócenos</a>
@@ -34,7 +34,7 @@ try {
         <div id="contenedor-destacados" class="cuadricula-productos">
             <?php foreach ($destacados as $producto): ?>
                 <div class="tarjeta-producto">
-                    <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?>">
+                    <img src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?> a domicilio en Popayán">
                     <h3><?php echo htmlspecialchars($producto['nombre']); ?></h3>
                     <p class="precio">$ <?php echo number_format($producto['precio'], 0, ',', '.'); ?></p>
 

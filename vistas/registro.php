@@ -39,9 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <main class="contenedor contenedor-login">
   <div class="tarjeta-login">
-    <h2 class="titulo-seccion">Crear Cuenta</h2>
+
+    <h1 class="titulo-seccion">Crear Cuenta</h1>
+
     <p class="subtitulo-login">
-      Únete para comprar tus regalos más rápido.
+      Crea tu cuenta para agilizar tus próximos pedidos.
     </p>
 
     <form id="formulario-registro" action="" method="POST">
@@ -91,6 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <a
         href="index.php?vista=login"
         style="color: var(--color-primario); font-weight: bold">Inicia sesión aquí</a>
+    </p>
+
+    <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #666;">
+      Tu información personal es privada y está protegida de forma segura.
     </p>
   </div>
 </main>

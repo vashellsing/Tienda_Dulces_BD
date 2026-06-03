@@ -31,12 +31,16 @@ if ($id > 0) {
     <section class="detalle-producto-card">
       <div class="detalle-col-izq">
         <div class="detalle-imagen-caja">
-          <img id="detalle-img" src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?>" />
+          <img id="detalle-img" src="recursos/img/<?php echo htmlspecialchars($producto['imagen']); ?>" alt="<?php echo htmlspecialchars($producto['nombre']); ?> - Regalo a domicilio en Popayán" />
         </div>
       </div>
 
       <div class="detalle-col-der">
         <h1><?php echo htmlspecialchars($producto['nombre']); ?></h1>
+        <p style="color: var(--color-primario); font-weight: bold; font-size: 0.9rem; margin-top: -10px; margin-bottom: 15px;">
+          📍 Disponible para entrega en Popayán
+        </p>
+
         <p class="producto-precio">$ <?php echo number_format($producto['precio'], 0, ',', '.'); ?></p>
         <div class="separador"></div>
         <h3>Descripción:</h3>
@@ -57,11 +61,11 @@ if ($id > 0) {
 
     <?php if (count($relacionados) > 0): ?>
       <section class="relacionados">
-        <h2 class="titulo-seccion">Productos relacionados</h2>
+        <h2 class="titulo-seccion">Más detalles que te podrían gustar</h2>
         <div class="cuadricula-productos">
           <?php foreach ($relacionados as $rel): ?>
             <div class="tarjeta-producto">
-              <img src="recursos/img/<?php echo htmlspecialchars($rel['imagen']); ?>" alt="<?php echo htmlspecialchars($rel['nombre']); ?>">
+              <img src="recursos/img/<?php echo htmlspecialchars($rel['imagen']); ?>" alt="<?php echo htmlspecialchars($rel['nombre']); ?> en Popayán">
               <h3><?php echo htmlspecialchars($rel['nombre']); ?></h3>
               <p class="precio">$ <?php echo number_format($rel['precio'], 0, ',', '.'); ?></p>
 
@@ -81,7 +85,7 @@ if ($id > 0) {
 
   <?php else: ?>
     <div style="text-align: center; padding: 50px 20px;">
-      <h2 class="titulo-seccion">Producto no encontrado</h2>
+      <h1 class="titulo-seccion">Producto no encontrado</h1>
       <p>Lo sentimos, parece que este dulce ya no está disponible.</p>
       <a href="index.php?vista=catalogo" class="btn btn-primario" style="margin-top:20px;">Ver catálogo</a>
     </div>

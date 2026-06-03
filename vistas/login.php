@@ -41,8 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <main class="contenedor contenedor-login">
   <div class="tarjeta-login">
-    <h2 class="titulo-seccion">Iniciar Sesión</h2>
-    <p class="subtitulo-login">Ingresa para poder realizar tus compras.</p>
+
+    <h1 class="titulo-seccion">Iniciar Sesión</h1>
+
+    <p class="subtitulo-login">Ingresa a tu cuenta para guardar tu carrito y programar tu entrega en Popayán.</p>
 
     <form id="formulario-login" action="" method="POST">
       <div class="grupo-input">
@@ -68,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <p id="mensaje-error" class="mensaje-error" style="display: none;"></p>
 
       <button type="submit" class="btn btn-primario btn-bloque">
-        Ingresar
+        Ingresar a mi cuenta
       </button>
     </form>
 
@@ -78,6 +80,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         href="index.php?vista=registro"
         style="color: var(--color-primario); font-weight: bold">Regístrate aquí</a>
     </p>
+
+    <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #666;">
+      Tus datos personales están cifrados y protegidos.
+    </p>
+
   </div>
 </main>
 
