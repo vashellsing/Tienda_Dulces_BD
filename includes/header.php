@@ -1,13 +1,13 @@
 <?php
-// 1. Iniciamos la sesión si no está iniciada
+// Iniciamos la sesión si no está iniciada
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// 2. Lógica de seguridad: Cierre de sesión por inactividad
+// Lógica de seguridad: Cierre de sesión por inactividad
 if (isset($_SESSION['usuario_id'])) {
 
-    $tiempo_maximo = 15 * 60; // 15 minutos expresados en segundos (900)
+    $tiempo_maximo = 15 * 60; 
 
     // Si existe un registro del último clic del usuario, calculamos el tiempo que ha pasado
     if (isset($_SESSION['ultimo_acceso'])) {
